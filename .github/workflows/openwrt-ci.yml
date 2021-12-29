@@ -54,7 +54,7 @@ jobs:
 
       - name: Update feeds
         run: |
-          sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
+          # sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
@@ -77,7 +77,6 @@ jobs:
           CONFIG_GNUTLS_PSK=y
           CONFIG_PACKAGE_6in4=y
           CONFIG_PACKAGE_antfs-mount=y
-          CONFIG_PACKAGE_ariang=y
           CONFIG_PACKAGE_attr=y
           CONFIG_PACKAGE_automount=y
           CONFIG_PACKAGE_avahi-dbus-daemon=y
@@ -126,7 +125,8 @@ jobs:
           CONFIG_PACKAGE_libtasn1=y
           CONFIG_PACKAGE_libtirpc=y
           CONFIG_PACKAGE_liburing=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_Plugin=y
+          CONFIG_PACKAGE_luci-app-ssr-plus=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
           CONFIG_PACKAGE_luci-app-zerotier=y
           CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y
           CONFIG_PACKAGE_luci-proto-ipv6=y
